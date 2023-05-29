@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 60,
+      "minLength": 40
+    },
+    "body": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 100
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "audios",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Health",
+        "Exercise",
+        "Healthy Habits",
+        "Lifestyle"
+      ],
+      "required": true
+    },
+    "tags": {
+      "type": "customField",
+      "options": [
+        "massage",
+        "smoothie",
+        "cardio",
+        "exercise",
+        "food techniques",
+        "recipe",
+        "healthy living"
+      ],
+      "required": true,
+      "customField": "plugin::multi-select.multi-select"
+    }
+  }
+}

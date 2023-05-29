@@ -1,0 +1,6 @@
+{
+    "importCost.debug": true,
+    "importCost.javascriptExtensions": [
+        "\\.jsx?$"
+    ]
+}
